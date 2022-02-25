@@ -15,13 +15,13 @@ app.use(logger("dev"));
 // app.use(bodyParser.json());
 
 
-var usersRouter = require("./routes/users");
 var chainRouter = require("./routes/chainid");
+var tokenRouter = require("./routes/token");
 
 //------------ import router
 // app.use("/", indexRouter);
-app.use("/users", usersRouter);
 app.use("/chainids",chainRouter);
+app.use("/tokens", tokenRouter);
 
 
 
