@@ -17,12 +17,14 @@ app.use(logger("dev"));
 
 var chainRouter = require("./routes/chainid");
 var tokenRouter = require("./routes/token");
+var pairRouter = require("./routes/pair");
+var contractRouter = require("./routes/contract");
 
 //------------ import router
-// app.use("/", indexRouter);
 app.use("/chainids",chainRouter);
 app.use("/tokens", tokenRouter);
-
+app.use("/pairs", pairRouter);
+app.use("/contracts", contractRouter);
 
 
 const PORT = process.env.PORT || 3001;

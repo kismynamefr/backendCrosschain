@@ -1,21 +1,21 @@
 const mongoose = require("mongoose")
 
 const TokenSchema = mongoose.Schema({
-    token: {
+    token1: {
         type: String
     },
-    address: {
+    chainid1: {
         type: String
     },
-    network: {
+    token2: {
         type: String
     },
-    chainid: {
+    chainid2: {
         type: String
     }
 }, {
     timestamps: true,
-    collection: "token"
+    collection: "pair"
 })
 
-module.exports = mongoose.model("Token", TokenSchema)
+module.exports = mongoose.model("Pair", TokenSchema)
